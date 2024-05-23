@@ -36,4 +36,8 @@ Non correte, fate una stima personale di tempo per ogni milestone e dosate le fo
 
 ## Svolgimento
 - MILESTONE 1
-    - Recupero html e css dell'esercizio 'html-css-boolzapp', lo analizzo e modifico usando vue.js
+    - Recupero html e css dell'esercizio 'html-css-boolzapp', lo analizzo e modifico replicando la grafica usando vue.js
+    - Ritorno array di partenza e contatore indice
+    - Creo v-for per stampa di tutti i messaggi di un oggetto specificato dal contatore dell'indice dell'array principale
+    - Assegno la classe specifica basandomi sulla chiave status
+    - Cre un altro v-for per tutti gli oggetti e stampo solo nome e immagine
