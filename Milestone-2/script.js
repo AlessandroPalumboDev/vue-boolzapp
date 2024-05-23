@@ -173,8 +173,15 @@ createApp({
 
 
 
+
         }
     },
 
+    methods: {
+        cambioChat(index) {
+            this.currentIndex = index;
+        },
+
+    }
 }).mount('#app');
 

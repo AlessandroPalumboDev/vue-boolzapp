@@ -169,6 +169,9 @@ createApp({
 
             currentIndex: 0,
 
+            newMessage: '',
+
+
 
 
 
@@ -176,5 +179,44 @@ createApp({
         }
     },
 
+    methods: {
+        cambioChat(index) {
+            this.currentIndex = index;
+        },
+
+
+
+        sendMessage() {
+            const firstTime = DateTime.now().toLocaleString(DateTime.DATETIME_SHORT_WITH_SECONDS);
+            if (this.newMessage) {
+                this.contacts[this.currentIndex].messages.push(
+                    {
+                        date: firstTime,
+                        message: this.newMessage,
+                        status: 'sent',
+                    }
+                );
+                this.newMessage = '';
+
+                setTimeout(() => {
+                    const secondTime = DateTime.now().toLocaleString(DateTime.DATETIME_SHORT_WITH_SECONDS);
+                    this.contacts[this.currentIndex].messages.push(
+                        {
+                            date: secondTime,
+                            message: 'Ok',
+                            status: 'received',
+                        }
+
+                    )
+                }, 1000)
+            }
+
+
+        }
+    },
 }).mount('#app');
+
+const { DateTime } = luxon;
+
+
 

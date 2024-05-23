@@ -44,3 +44,14 @@ Non correte, fate una stima personale di tempo per ogni milestone e dosate le fo
 
 - MILESTONE 2
     - Aggiungo evento al click sugli elementi della lista delle chat che cambia il contatore indice 
+
+- MILESTONE 3
+    - Dichiaro una chiave di ritorno vuota per il nuovo messaggio
+    - Aggiungo v-model al campio di input del messaggio collegato alla chiave vuota
+    - Aggiungo evento al clikc che sfrutta la funzione di invio messaggio
+    - Creo funzione di invio messaggio che:
+        - (se il v-model è diverso da chiave vuota)
+            - Pusha oggetto con v-model modificato, data e status: 'sent'
+            - Svuota v-model
+            - setTimeout di un secondo che pusha un altro oggetto con data, testo:'Ok' e status: 'received'
+            - (provo a usare Luxon per la chiave della data)
