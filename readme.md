@@ -55,3 +55,11 @@ Non correte, fate una stima personale di tempo per ogni milestone e dosate le fo
             - Svuota v-model
             - setTimeout di un secondo che pusha un altro oggetto con data, testo:'Ok' e status: 'received'
             - (provo a usare Luxon per la chiave della data)
+
+- MILESTONE 4
+    - Creo dato vuoto per il v-model del campo di imput di ricerca
+    - Creo metodo che se il v-model viene riempito restituisce (usando .filter()) un array di elementi con la chiave name uguale a quelli inclusi nell'array originale, altrimenti restituisce l'array di partenza. Tutto .toLowerCase()
+    - Uso lo stesso metodo per il v-for della visualizzazione della lista delle chat
+
+<!-- NON FUNZIONA LA RICERCA DELLA CHAT -->
+<!-- milestone 4 da finire, l'input è a riga 70 -->

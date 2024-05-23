@@ -171,10 +171,7 @@ createApp({
 
             newMessage: '',
 
-
-
-
-
+            searchChat: '',
 
         }
     },
@@ -214,6 +211,19 @@ createApp({
 
                     )
                 }, 1000)
+            }
+
+        },
+
+        listName() {
+            if (this.searchChat) {
+                return this.contacts.filter((element) => {
+                    // console.log(searchChat);
+                    return element.name.toLowerCase().includes(this.searchChat.toLowerCase());
+
+                });
+            } else {
+                return this.contacts;
             }
 
 
