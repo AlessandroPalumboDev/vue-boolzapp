@@ -73,7 +73,7 @@
                 <div class="chats">
                     <!-- LISTA LUNGHISSIMA DELLE CHAT -->
                     <ul>
-                        <li v-for="(element,index) in contacts">
+                        <li v-for="(element,index) in contacts" @click="cambioChat(index)">
                             <div class="chats-content">
                                 <div class="top-img flex">
                                     <img :src="contacts[index].avatar" :alt="contacts[index].name">

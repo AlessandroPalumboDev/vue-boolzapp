@@ -41,3 +41,6 @@ Non correte, fate una stima personale di tempo per ogni milestone e dosate le fo
     - Creo v-for per stampa di tutti i messaggi di un oggetto specificato dal contatore dell'indice dell'array principale
     - Assegno la classe specifica basandomi sulla chiave status
     - Cre un altro v-for per tutti gli oggetti e stampo solo nome e immagine
+
+- MILESTONE 2
+    - Aggiungo evento al click sugli elementi della lista delle chat che cambia il contatore indice 
