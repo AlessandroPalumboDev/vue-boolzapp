@@ -58,8 +58,7 @@ Non correte, fate una stima personale di tempo per ogni milestone e dosate le fo
 
 - MILESTONE 4
     - Creo dato vuoto per il v-model del campo di imput di ricerca
-    - Creo metodo che se il v-model viene riempito restituisce (usando .filter()) un array di elementi con la chiave name uguale a quelli inclusi nell'array originale, altrimenti restituisce l'array di partenza. Tutto .toLowerCase()
+    - Creo metodo che se il v-model viene riempito restituisce (usando .map()) un array di elementi con la chiave .name che contiene il v-model e modifica la chiave .visible a quelli che non lo contengono, altrimenti restituisce l'array di partenza. Tutto .toLowerCase()
     - Uso lo stesso metodo per il v-for della visualizzazione della lista delle chat
+    - Aggiungo v-show alla lista che visualizza solo elementi con visible === true
 
-<!-- NON FUNZIONA LA RICERCA DELLA CHAT -->
-<!-- milestone 4 da finire, l'input è a riga 70 -->

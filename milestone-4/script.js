@@ -173,6 +173,8 @@ createApp({
 
             searchChat: '',
 
+
+
         }
     },
 
@@ -184,7 +186,7 @@ createApp({
 
 
         sendMessage() {
-            const firstTime = DateTime.now().toLocaleString(DateTime.DATETIME_SHORT_WITH_SECONDS);
+            const firstTime = DateTime.now().setLocale('it').toFormat('D T');
             if (this.newMessage) {
                 this.contacts[this.currentIndex].messages.push(
                     {
@@ -201,7 +203,7 @@ createApp({
                 // });
 
                 setTimeout(() => {
-                    const secondTime = DateTime.now().toLocaleString(DateTime.DATETIME_SHORT_WITH_SECONDS);
+                    const secondTime = DateTime.now().setLocale('it').toFormat('D T');
                     this.contacts[this.currentIndex].messages.push(
                         {
                             date: secondTime,
@@ -216,22 +218,28 @@ createApp({
         },
 
         listName() {
-            if (this.searchChat) {
-                return this.contacts.filter((element) => {
-                    // console.log(searchChat);
-                    return element.name.toLowerCase().includes(this.searchChat.toLowerCase());
-
-                });
+            if (this.searchChat){
+                console.log(this.searchChat)
+                return this.contacts.map((element) => {
+                    if(element.name.toLowerCase().includes(this.searchChat.toLowerCase())){
+                        return {...element}
+                    } else {
+                        return {...element, visible: false}
+                    }
+                })
             } else {
                 return this.contacts;
             }
-
-
         }
-    },
+
+    }
+
+
+
+
+
 }).mount('#app');
 
 const { DateTime } = luxon;
-
 
 
