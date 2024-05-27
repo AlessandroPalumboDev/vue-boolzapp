@@ -186,7 +186,7 @@ createApp({
 
 
         sendMessage() {
-            const firstTime = DateTime.now().setLocale('it').toFormat('D T');
+            const firstTime = DateTime.now().setLocale('it').toLocaleString(DateTime.DATETIME_SHORT_WITH_SECONDS);
             if (this.newMessage) {
                 this.contacts[this.currentIndex].messages.push(
                     {
@@ -203,7 +203,7 @@ createApp({
                 // });
 
                 setTimeout(() => {
-                    const secondTime = DateTime.now().setLocale('it').toFormat('D T');
+                    const secondTime = DateTime.now().setLocale('it').toLocaleString(DateTime.DATETIME_SHORT_WITH_SECONDS);
                     this.contacts[this.currentIndex].messages.push(
                         {
                             date: secondTime,
@@ -219,18 +219,23 @@ createApp({
 
         listName() {
             if (this.searchChat){
-                console.log(this.searchChat)
                 return this.contacts.map((element) => {
                     if(element.name.toLowerCase().includes(this.searchChat.toLowerCase())){
-                        return {...element}
+                        // console.log(`si vede`);
+                        return element
                     } else {
-                        return {...element, visible: false}
+                        // console.log("non si vede")
+                        return !element.visible 
                     }
                 })
             } else {
                 return this.contacts;
             }
-        }
+        },
+
+        // deleteMessage(index){
+        //     this.contacts[this.currentIndex].messages.splice(index, 1);
+        // },
 
     }
 

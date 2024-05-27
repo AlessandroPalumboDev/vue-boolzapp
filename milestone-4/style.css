@@ -199,6 +199,17 @@ body{
     height: 15px;
 }
 
+#info{
+    background: transparent;
+    border: none;
+    max-width:20px;
+}
+
+#info option{
+    line-height: 4;
+    height: 20px;
+}
+
 /* TABLET */
 @media screen and (min-width: 480px) {
     .row{
